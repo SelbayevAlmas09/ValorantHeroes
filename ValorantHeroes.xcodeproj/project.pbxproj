@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		3F850DF928426E6100A2354E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850DF828426E6100A2354E /* AppDelegate.swift */; };
 		3F850DFB28426E6100A2354E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850DFA28426E6100A2354E /* SceneDelegate.swift */; };
-		3F850DFD28426E6100A2354E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850DFC28426E6100A2354E /* ViewController.swift */; };
 		3F850E0028426E6100A2354E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F850DFE28426E6100A2354E /* Main.storyboard */; };
 		3F850E0228426E6400A2354E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F850E0128426E6400A2354E /* Assets.xcassets */; };
 		3F850E0528426E6400A2354E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F850E0328426E6400A2354E /* LaunchScreen.storyboard */; };
+		3F850E0D28426E9600A2354E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E0C28426E9600A2354E /* NetworkManager.swift */; };
+		3F850E0F28426F2300A2354E /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E0E28426F2300A2354E /* HeroListViewController.swift */; };
+		3F850E122842702F00A2354E /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E112842702F00A2354E /* Hero.swift */; };
+		3F850E152843DE6B00A2354E /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F850DF528426E6100A2354E /* ValorantHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValorantHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F850DF828426E6100A2354E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F850DFA28426E6100A2354E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F850DFC28426E6100A2354E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F850DFF28426E6100A2354E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F850E0128426E6400A2354E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F850E0428426E6400A2354E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F850E0628426E6400A2354E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F850E0C28426E9600A2354E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3F850E0E28426F2300A2354E /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
+		3F850E112842702F00A2354E /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		3F850DF728426E6100A2354E /* ValorantHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				3F850E162843DE7100A2354E /* ViewControllers */,
+				3F850E102842700700A2354E /* Models */,
+				3F850E132842751600A2354E /* Services */,
 				3F850DF828426E6100A2354E /* AppDelegate.swift */,
 				3F850DFA28426E6100A2354E /* SceneDelegate.swift */,
-				3F850DFC28426E6100A2354E /* ViewController.swift */,
 				3F850DFE28426E6100A2354E /* Main.storyboard */,
 				3F850E0128426E6400A2354E /* Assets.xcassets */,
 				3F850E0328426E6400A2354E /* LaunchScreen.storyboard */,
 				3F850E0628426E6400A2354E /* Info.plist */,
 			);
 			path = ValorantHeroes;
+			sourceTree = "<group>";
+		};
+		3F850E102842700700A2354E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F850E112842702F00A2354E /* Hero.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F850E132842751600A2354E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F850E0C28426E9600A2354E /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3F850E162843DE7100A2354E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F850E0E28426F2300A2354E /* HeroListViewController.swift */,
+				3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F850DFD28426E6100A2354E /* ViewController.swift in Sources */,
+				3F850E0D28426E9600A2354E /* NetworkManager.swift in Sources */,
+				3F850E0F28426F2300A2354E /* HeroListViewController.swift in Sources */,
 				3F850DF928426E6100A2354E /* AppDelegate.swift in Sources */,
+				3F850E152843DE6B00A2354E /* HeroDetailViewController.swift in Sources */,
 				3F850DFB28426E6100A2354E /* SceneDelegate.swift in Sources */,
+				3F850E122842702F00A2354E /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
