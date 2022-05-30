@@ -64,8 +64,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="o4l-uI-zqd">
-                                <rect key="frame" x="24" y="148" width="366" height="182"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="o4l-uI-zqd">
+                                <rect key="frame" x="24" y="88" width="366" height="172"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhs-rQ-58r">
                                         <rect key="frame" x="0.0" y="0.0" width="33.5" height="20.5"/>
@@ -74,30 +74,60 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymH-Lb-8H7">
-                                        <rect key="frame" x="0.0" y="55.5" width="126.5" height="71"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="126.5" height="71"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="71"/>
                                         <color key="textColor" red="0.99919265509999999" green="0.98230116544983537" blue="0.52306379432829464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFn-6f-dbA">
-                                        <rect key="frame" x="0.0" y="161.5" width="87.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFn-6f-dbA">
+                                        <rect key="frame" x="0.0" y="151.5" width="87.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <segmentedControl opaque="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-hg-YDp">
+                                <rect key="frame" x="24" y="284" width="366" height="51"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dOL-ej-0mS"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="16" bottom="16" trailing="16"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="abilitySelectAction" destination="Dfh-nB-ukh" eventType="valueChanged" id="fWs-rH-Zif"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Ability Text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ro-3s-efB">
+                                <rect key="frame" x="24" y="358" width="366" height="20.5"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="20" trailing="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pc1-8B-RGj"/>
                         <color key="backgroundColor" red="0.70707986260262368" green="0.82002481399254679" blue="0.91434985123993462" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="o4l-uI-zqd" firstAttribute="top" secondItem="Pc1-8B-RGj" secondAttribute="top" constant="60" id="f1S-GA-dR9"/>
+                            <constraint firstItem="5Ro-3s-efB" firstAttribute="leading" secondItem="Pc1-8B-RGj" secondAttribute="leading" constant="24" id="BdY-r3-CaB"/>
+                            <constraint firstItem="dfX-hg-YDp" firstAttribute="leading" secondItem="Pc1-8B-RGj" secondAttribute="leading" constant="24" id="RCb-jS-rXZ"/>
+                            <constraint firstItem="dfX-hg-YDp" firstAttribute="top" secondItem="o4l-uI-zqd" secondAttribute="bottom" constant="24" id="Xh2-52-Me6"/>
+                            <constraint firstItem="o4l-uI-zqd" firstAttribute="top" secondItem="Pc1-8B-RGj" secondAttribute="top" id="f1S-GA-dR9"/>
+                            <constraint firstItem="5Ro-3s-efB" firstAttribute="top" secondItem="dfX-hg-YDp" secondAttribute="bottom" constant="24" id="kkF-YV-Vmi"/>
+                            <constraint firstItem="Pc1-8B-RGj" firstAttribute="trailing" secondItem="dfX-hg-YDp" secondAttribute="trailing" constant="24" id="nLp-ax-cQT"/>
                             <constraint firstItem="Pc1-8B-RGj" firstAttribute="trailing" secondItem="o4l-uI-zqd" secondAttribute="trailing" constant="24" id="o9J-Db-JZQ"/>
                             <constraint firstItem="o4l-uI-zqd" firstAttribute="leading" secondItem="Pc1-8B-RGj" secondAttribute="leading" constant="24" id="vdw-Xo-Ptk"/>
+                            <constraint firstItem="Pc1-8B-RGj" firstAttribute="trailing" secondItem="5Ro-3s-efB" secondAttribute="trailing" constant="24" id="xt7-Vn-Rfy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vtP-EJ-Y3V"/>
                     <connections>
+                        <outlet property="abilitySegmentControl" destination="dfX-hg-YDp" id="UbR-ag-fNT"/>
+                        <outlet property="abilityTextLabel" destination="5Ro-3s-efB" id="fF6-8z-XKq"/>
                         <outlet property="descriptionLabel" destination="xFn-6f-dbA" id="Ak1-hc-Fi5"/>
                         <outlet property="nameLabel" destination="ymH-Lb-8H7" id="Avz-Ta-RvE"/>
                         <outlet property="roleLabel" destination="dhs-rQ-58r" id="25x-Bo-cxi"/>
