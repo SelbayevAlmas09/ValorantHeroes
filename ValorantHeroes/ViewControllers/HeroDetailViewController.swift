@@ -11,6 +11,7 @@ class HeroDetailViewController: UIViewController {
 
     var heroDetail: Hero!
     
+    
     @IBOutlet var roleLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
@@ -18,26 +19,36 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet var abilitySegmentControl: UISegmentedControl!
     @IBOutlet var abilityTextLabel: UILabel!
     
+    private let abilityDict = ["Ability1": 1, "Ability2": 2, "Grenade": 3, "Ultimate": 4]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        roleLabel.text = heroDetail.role.displayName
+         
+        
+        
+        roleLabel.text = String.uppercased(heroDetail.role.displayName)()
         nameLabel.text = String.uppercased(heroDetail.displayName)()
-        descriptionLabel.text = heroDetail.description
+        //descriptionLabel.text = heroDetail.description
         setUpAbilitySC()
     }
     
     @IBAction func abilitySelectAction() {
+        //var labelFrame = descriptionLabel.frame
+        
         if abilitySegmentControl.selectedSegmentIndex != 0 {
+            descriptionLabel.isHidden = true
             abilityTextLabel.text = heroDetail.abilities[abilitySegmentControl.selectedSegmentIndex-1].description
+            
         } else {
+            descriptionLabel.text = heroDetail.description
+            descriptionLabel.isHidden = false
             abilityTextLabel.text = heroDetail.role.description
+            
         }
         
     }
     
     private func setUpAbilitySC() {
-        var count = 1
-        
         abilitySegmentControl.removeAllSegments()
         
         NetworkManager.shared.fetchImage(from: heroDetail.role.displayIcon) { icon in
@@ -48,14 +59,11 @@ class HeroDetailViewController: UIViewController {
         
         for ability in heroDetail.abilities {
             NetworkManager.shared.fetchImage(from: ability.displayIcon) { icon in
-                self.abilitySegmentControl.insertSegment(with: UIImage(data: icon), at: count, animated: true)
-                
-                //self.abilitySegmentControl.frame.size.width = 200
-                //self.abilitySegmentControl.frame.size.height = 200
-                
-                count += 1
+                guard let index = self.abilityDict[ability.slot ?? ""] else { return }
+                self.abilitySegmentControl.insertSegment(with: UIImage(data: icon), at: index, animated: true)
             }
         }
+        
     }
     
     

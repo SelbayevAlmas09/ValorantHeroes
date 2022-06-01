@@ -8,14 +8,15 @@
 import UIKit
 
 class HeroListViewController: UITableViewController {
-    private var hero: [Hero]?
+    var hero: [Hero]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Heroes"
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.rowHeight = 60
-        fetchData(from: "https://valorant-api.com/v1/agents?isPlayableCharacter=true")//dade69b4-4f5a-8528-247b-219e5a1facd6
+        //fetchData(from: "https://valorant-api.com/v1/agents?isPlayableCharacter=true")//dade69b4-4f5a-8528-247b-219e5a1facd6
     }
 
     // MARK: - Table view data source

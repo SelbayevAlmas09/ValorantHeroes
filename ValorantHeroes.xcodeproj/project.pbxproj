@@ -16,6 +16,7 @@
 		3F850E0F28426F2300A2354E /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E0E28426F2300A2354E /* HeroListViewController.swift */; };
 		3F850E122842702F00A2354E /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E112842702F00A2354E /* Hero.swift */; };
 		3F850E152843DE6B00A2354E /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */; };
+		3F850E19284679F000A2354E /* HeroesTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E18284679F000A2354E /* HeroesTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3F850E0E28426F2300A2354E /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
 		3F850E112842702F00A2354E /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		3F850E18284679F000A2354E /* HeroesTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		3F850DF728426E6100A2354E /* ValorantHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				3F850E172846731300A2354E /* Views */,
 				3F850E162843DE7100A2354E /* ViewControllers */,
 				3F850E102842700700A2354E /* Models */,
 				3F850E132842751600A2354E /* Services */,
@@ -96,8 +99,16 @@
 			children = (
 				3F850E0E28426F2300A2354E /* HeroListViewController.swift */,
 				3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */,
+				3F850E18284679F000A2354E /* HeroesTabBarController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3F850E172846731300A2354E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				3F850E152843DE6B00A2354E /* HeroDetailViewController.swift in Sources */,
 				3F850DFB28426E6100A2354E /* SceneDelegate.swift in Sources */,
 				3F850E122842702F00A2354E /* Hero.swift in Sources */,
+				3F850E19284679F000A2354E /* HeroesTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
