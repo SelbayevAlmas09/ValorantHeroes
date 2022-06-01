@@ -201,19 +201,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcE-M7-YTo">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="218"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tcE-M7-YTo">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hero Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kl5-XR-Fhs">
-                                            <rect key="frame" x="37" y="219" width="86" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kl5-XR-Fhs">
+                                            <rect key="frame" x="37" y="219.5" width="86" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="tcE-M7-YTo" firstAttribute="leading" secondItem="wrd-mD-hdS" secondAttribute="leading" id="8qT-Re-Fuu"/>
+                                    <constraint firstItem="tcE-M7-YTo" firstAttribute="bottom" secondItem="kl5-XR-Fhs" secondAttribute="bottom" id="AHX-pZ-bwl"/>
+                                    <constraint firstAttribute="bottom" secondItem="kl5-XR-Fhs" secondAttribute="bottom" id="GTe-Wd-vRP"/>
+                                    <constraint firstAttribute="trailing" secondItem="kl5-XR-Fhs" secondAttribute="trailing" constant="37" id="WYi-K0-4nR"/>
+                                    <constraint firstItem="tcE-M7-YTo" firstAttribute="top" secondItem="wrd-mD-hdS" secondAttribute="top" id="aCd-hE-sGB"/>
+                                    <constraint firstItem="kl5-XR-Fhs" firstAttribute="leading" secondItem="wrd-mD-hdS" secondAttribute="leading" constant="37" id="aTY-ni-ME9"/>
+                                    <constraint firstAttribute="trailing" secondItem="tcE-M7-YTo" secondAttribute="trailing" id="yIh-bL-sDo"/>
+                                </constraints>
                                 <size key="customSize" width="160" height="240"/>
                                 <connections>
                                     <outlet property="heroImageView" destination="tcE-M7-YTo" id="1Q8-8J-z7p"/>
