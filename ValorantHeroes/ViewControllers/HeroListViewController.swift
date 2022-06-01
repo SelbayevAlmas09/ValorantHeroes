@@ -8,7 +8,7 @@
 import UIKit
 
 class HeroListViewController: UITableViewController {
-    var hero: [Hero]?
+    var hero: [Hero] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,21 +16,20 @@ class HeroListViewController: UITableViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.rowHeight = 60
-        //fetchData(from: "https://valorant-api.com/v1/agents?isPlayableCharacter=true")//dade69b4-4f5a-8528-247b-219e5a1facd6
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hero?.count ?? 1
+        return hero.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = hero?[indexPath.row].displayName
-        content.secondaryText = hero?[indexPath.row].role.displayName
+        content.text = hero[indexPath.row].displayName
+        content.secondaryText = hero[indexPath.row].role.displayName
         
-        NetworkManager.shared.fetchHeroIcon(from: hero?[indexPath.row].displayIcon) { heroIcon in
+        NetworkManager.shared.fetchHeroIcon(from: hero[indexPath.row].displayIcon) { heroIcon in
             content.image = heroIcon
             cell.contentConfiguration = content
         }
@@ -41,7 +40,7 @@ class HeroListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let heroDetail = hero?[indexPath.row]
+        let heroDetail = hero[indexPath.row]
         performSegue(withIdentifier: "showHeroDetail", sender: heroDetail)
     }
 

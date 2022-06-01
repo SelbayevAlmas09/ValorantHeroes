@@ -8,11 +8,12 @@
 import UIKit
 
 class HeroesTabBarController: UITabBarController {
-    private var hero: [Hero]?
+    private var hero: [Hero] = []
+    private let apiUrl = "https://valorant-api.com/v1/agents?isPlayableCharacter=true"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData(from: "https://valorant-api.com/v1/agents?isPlayableCharacter=true")
+        fetchData(from: apiUrl)
     }
     
     private func fetchData(from url: String?) {
@@ -23,7 +24,6 @@ class HeroesTabBarController: UITabBarController {
     
     // MARK: - Navigation
     private func transferData(about hero: [Hero]) {
-        
         guard let navigations = viewControllers else { return }
         
         for navigation in navigations {
@@ -32,6 +32,9 @@ class HeroesTabBarController: UITabBarController {
             if let heroListVC = navigationVC.topViewController as? HeroListViewController {
                 heroListVC.hero = hero
                 heroListVC.tableView.reloadData()
+            } else if let heroGalleryVC = navigationVC.topViewController as? HeroGalleryViewController {
+                heroGalleryVC.hero = hero
+                heroGalleryVC.collectionView.reloadData()
             }
         }
     }

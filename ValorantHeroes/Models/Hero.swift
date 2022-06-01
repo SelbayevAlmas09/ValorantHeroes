@@ -15,6 +15,7 @@ struct Hero: Decodable {
     let description: String
     let displayIcon: String
     let displayName: String
+    let fullPortraitV2: String
     let role: Role
     let abilities: [Ability]
 }

@@ -8,9 +8,7 @@
 import UIKit
 
 class HeroDetailViewController: UIViewController {
-
     var heroDetail: Hero!
-    
     
     @IBOutlet var roleLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
@@ -23,18 +21,12 @@ class HeroDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-        
-        
         roleLabel.text = String.uppercased(heroDetail.role.displayName)()
         nameLabel.text = String.uppercased(heroDetail.displayName)()
-        //descriptionLabel.text = heroDetail.description
         setUpAbilitySC()
     }
     
     @IBAction func abilitySelectAction() {
-        //var labelFrame = descriptionLabel.frame
-        
         if abilitySegmentControl.selectedSegmentIndex != 0 {
             descriptionLabel.isHidden = true
             abilityTextLabel.text = heroDetail.abilities[abilitySegmentControl.selectedSegmentIndex-1].description
@@ -43,9 +35,7 @@ class HeroDetailViewController: UIViewController {
             descriptionLabel.text = heroDetail.description
             descriptionLabel.isHidden = false
             abilityTextLabel.text = heroDetail.role.description
-            
         }
-        
     }
     
     private func setUpAbilitySC() {
@@ -63,8 +53,5 @@ class HeroDetailViewController: UIViewController {
                 self.abilitySegmentControl.insertSegment(with: UIImage(data: icon), at: index, animated: true)
             }
         }
-        
     }
-    
-    
 }

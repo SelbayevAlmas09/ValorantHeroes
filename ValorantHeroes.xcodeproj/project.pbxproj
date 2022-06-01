@@ -17,6 +17,8 @@
 		3F850E122842702F00A2354E /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E112842702F00A2354E /* Hero.swift */; };
 		3F850E152843DE6B00A2354E /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */; };
 		3F850E19284679F000A2354E /* HeroesTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E18284679F000A2354E /* HeroesTabBarController.swift */; };
+		3F850E1E2847CBBD00A2354E /* HeroGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E1D2847CBBD00A2354E /* HeroGalleryViewController.swift */; };
+		3F850E202847DEB500A2354E /* HeroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F850E1F2847DEB500A2354E /* HeroViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		3F850E112842702F00A2354E /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		3F850E18284679F000A2354E /* HeroesTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTabBarController.swift; sourceTree = "<group>"; };
+		3F850E1D2847CBBD00A2354E /* HeroGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroGalleryViewController.swift; sourceTree = "<group>"; };
+		3F850E1F2847DEB500A2354E /* HeroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +72,9 @@
 				3F850E162843DE7100A2354E /* ViewControllers */,
 				3F850E102842700700A2354E /* Models */,
 				3F850E132842751600A2354E /* Services */,
-				3F850DF828426E6100A2354E /* AppDelegate.swift */,
-				3F850DFA28426E6100A2354E /* SceneDelegate.swift */,
-				3F850DFE28426E6100A2354E /* Main.storyboard */,
-				3F850E0128426E6400A2354E /* Assets.xcassets */,
-				3F850E0328426E6400A2354E /* LaunchScreen.storyboard */,
-				3F850E0628426E6400A2354E /* Info.plist */,
+				3F850E1A2847BC7400A2354E /* App */,
+				3F850E1B2847BC8100A2354E /* Stoyboards */,
+				3F850E1C2847BCA300A2354E /* Resources */,
 			);
 			path = ValorantHeroes;
 			sourceTree = "<group>";
@@ -99,6 +100,7 @@
 			children = (
 				3F850E0E28426F2300A2354E /* HeroListViewController.swift */,
 				3F850E142843DE6B00A2354E /* HeroDetailViewController.swift */,
+				3F850E1D2847CBBD00A2354E /* HeroGalleryViewController.swift */,
 				3F850E18284679F000A2354E /* HeroesTabBarController.swift */,
 			);
 			path = ViewControllers;
@@ -107,8 +109,36 @@
 		3F850E172846731300A2354E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F850E1F2847DEB500A2354E /* HeroViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3F850E1A2847BC7400A2354E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3F850DF828426E6100A2354E /* AppDelegate.swift */,
+				3F850DFA28426E6100A2354E /* SceneDelegate.swift */,
+				3F850E0628426E6400A2354E /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3F850E1B2847BC8100A2354E /* Stoyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3F850DFE28426E6100A2354E /* Main.storyboard */,
+				3F850E0328426E6400A2354E /* LaunchScreen.storyboard */,
+			);
+			path = Stoyboards;
+			sourceTree = "<group>";
+		};
+		3F850E1C2847BCA300A2354E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F850E0128426E6400A2354E /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F850E0D28426E9600A2354E /* NetworkManager.swift in Sources */,
+				3F850E202847DEB500A2354E /* HeroViewCell.swift in Sources */,
 				3F850E0F28426F2300A2354E /* HeroListViewController.swift in Sources */,
 				3F850DF928426E6100A2354E /* AppDelegate.swift in Sources */,
 				3F850E152843DE6B00A2354E /* HeroDetailViewController.swift in Sources */,
 				3F850DFB28426E6100A2354E /* SceneDelegate.swift in Sources */,
 				3F850E122842702F00A2354E /* Hero.swift in Sources */,
 				3F850E19284679F000A2354E /* HeroesTabBarController.swift in Sources */,
+				3F850E1E2847CBBD00A2354E /* HeroGalleryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7KD7ZDKV3W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ValorantHeroes/Info.plist;
+				INFOPLIST_FILE = ValorantHeroes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -365,7 +397,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7KD7ZDKV3W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ValorantHeroes/Info.plist;
+				INFOPLIST_FILE = ValorantHeroes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
